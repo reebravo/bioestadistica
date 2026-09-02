@@ -1,0 +1,143 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[a4paper, margin=1in]{geometry}
+\usepackage{minted}
+\usepackage[spanish]{babel}
+\usepackage{enumitem}
+
+% Configuración global para el resaltado de código R
+\setminted[r]{
+    frame=lines,
+    linenos,
+    fontsize=\large,
+    xleftmargin=2em
+}
+
+\large
+\title{Taller Práctico de R}
+
+\begin{document}
+
+\begin{titlepage}
+    \begin{center}
+        \line(1,0){300}\\[0.65cm]
+        \huge{\bfseries Asignación de variables y operaciones aritméticas}\\[0.3cm]
+        \line(1,0){300}\\[0.5cm]
+        \textsc{\Large Bioestadística Intermedia}\\[0.5cm]
+        \textsc{\LARGE \today}\\[4.5cm]     
+    \end{center}
+    
+    \begin{flushright}
+        \textsc{\Large Dr. Ricardo Iván Bravo Chávez}\\[0.3cm]
+        \textsc{\Large Área Académica de Gerontología}\\[0.3cm]
+        \textsc{\Large Maestría en Ciencias Biomédicas}\\[0.5cm]
+    \end{flushright}
+\end{titlepage}
+
+\section*{Ejercicio 1}
+
+\subsection*{Enunciado}
+\textquestiondown Cuál de las siguientes expresiones en R calcula 
+correctamente la siguiente operación matemática 
+\begin{center}
+    \large
+$\frac{10+5}{2\times3}$
+\end{center}
+
+%\subsection*{Demostración en R}
+\begin{minted}{r}
+# Elija la opción correcta
+10 + 5 / 2 * 3      # Opción a)
+(10 + 5) / 2 * 3    # Opcion b)
+(10 + 5) / (2 * 3)  # Opción c)
+10 + (5 / 2) * 3    # Opción d)
+\end{minted}
+
+\section*{Ejercicio 2}
+Un estudiante intentó calcular $5 \times 4$ escribiendo en la consola: 5(4). 
+R devolvió el siguiente error 
+
+\begin{minted}{r}
+# Piense en el error
+5(4)
+"Error in 5(4): attempt to apply non-function"
+\end{minted}
+
+\textquestiondown Por qué ocurre este error? \textquestiondown Cómo 
+debe escribirse la expresión correctamente en R?
+
+% \subsection*{Solución en R}
+% \begin{minted}{r}
+% # Solución 2
+% v <- c(1, 4, 9, 16, 25)
+% \end{minted}
+
+\section*{Ejercicio 3}
+Analiza la siguiente secuencia de código en R y determina cuál será 
+el valor final de la variable
+
+\begin{minted}{r}
+# Determina el valor de la variable
+a <- 10
+b <- a * 2
+a <- 5
+\end{minted}
+
+\begin{enumerate}[label=\alph*]
+    \item 10
+    \item 20
+    \item 5
+    \item R lanza una advertencia
+\end{enumerate}
+
+\section*{Ejercicio 4}
+Imagina que creaste las siguientes variables para probar un cálculo: 
+
+\begin{minted}{r}
+temp_1 <- 45
+temp_2 <- 90
+resultado <- temp_1 + temp_2
+\end{minted}
+
+\subsection*{4.1}
+Escribe la instrucción en R para borrar únicamente las variables 
+temporales (\textbf{temp\_1} y \textbf{temp\_2}) sin eliminar el resultado. 
+
+\subsection*{4.2}
+Escribe un comando que te permite listar todos los objetos que están 
+actualmente guardados en tu entorno de trabajo (\textit{Enviroment}).
+
+\section*{Ejercicio 5}
+Tienes la siguiente serie de calificaciones de un estudiante: 85, 90, 78, 92, 88, 60.
+\begin{itemize}
+    \item Escribe el código en R para almacenar estas calificaciones en un vector llamado "notas".
+    \item Calcula la nota \textit{promedio} utilizando las funciones incorporadas \textbf{sum()} y \textbf{length()}
+    \item Verifica tu resultado anterior utilizando la función \textbf{mean()}.
+\end{itemize}
+
+\section*{Ejercicio 6}
+Un comerciante tiene los precios de 4 productos almacenados en un vector:
+\begin{minted}{r}
+    precios <- c(100,250,80,150)
+\end{minted}
+
+Debido a la inflación, necesita aplicar un incremento del \textbf{15\%} a todos 
+los productos y además sumar un costo fijo de \textbf{\$5} a cada uno. Escribe 
+una sola línea de código en R para calcular el nuevo precio total 
+de cada producto y guardarlo en un vector llamado \textbf{nuevos\_precios}.
+
+\section*{Ejercicio 7}
+Dado el vector
+\begin{minted}{r}
+dias <- c("Lunes", "Martes", "Miércoles", "Jueves", "Viernes", 
+"Sábado", "Domingo")
+\end{minted}
+\textquestiondown Qué instrucción utilizarías para extraer únicamente 
+los días del fin de semana (``Sabado'' y ``Domingo'')
+\textquestiondown Qué devuelve la instrucción \textbf{dias[-1]}?
+
+
+
+\end{document}
