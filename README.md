@@ -1,7 +1,11 @@
-# Bioestadistica
-Curso de estadistica para el programa de maestria en ciencias biomedias
-asistentes:
--Ramon Gonzalez Alamilla
--Yosendi Vera Lucero
--Luis Arturo Calderon Herrera
--Emma Jacqueline Rodríguez Murillo
+# Bioestadística
+
+## 📋 Descripción
+Asignatura optativa para el programa de Maestría en Ciencias Biomédicas y de la Salud.
+
+## 🧑‍🔬 Asistentes
+
+- Ramón González Alamilla
+- Yosendi Vera Lucero
+- Luis Arturo Calderón Herrera
+- Emma Jacqueline Rodriguez Murillo
